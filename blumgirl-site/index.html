@@ -2,46 +2,36 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BlumGirl • Мем-монета</title>
-  <!-- Подключаем CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BLUMGIRL</title>
+  <!-- Chart.js из CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- StonFi Swap Widget -->
+  <script src="https://app.ston.fi/widgets/swap-widget.js" defer></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- === ХЕДЕР === -->
-  <header class="hero">
-    <h1>BLUM<span>GIRL</span></h1>
-    <p class="tagline">Новая мем-монета в стиле неонового космо-градиента</p>
-    <a href="https://tonscan.org/address/<АДРЕС_ТОКЕНА>" class="btn">Купить 1 TON</a>
+  <header>
+    <h1>BLUMGIRL — мем-монета будущего</h1>
+    <p>Купить, продать и следить за курсом прямо здесь.</p>
   </header>
 
-  <!-- === Токеномика === -->
-  <section class="tokenomics">
-    <h2>Токеномика</h2>
-    <ul>
-      <li>🔹 Общее предложение: 1 000 000 000 $BLUMGIRL</li>
-      <li>🔹 Ликвидность: 200 000 000 токенов + 1450 TON</li>
-      <li>🔹 Резерв на маркетинг: 10 %</li>
-      <li>🔹 Команда: 15 % (разблокировка поэтапно)</li>
-    </ul>
+  <!-- Токеномика -->
+  <section id="tokenomics" class="card-grid"></section>
+
+  <!-- График цены -->
+  <section>
+    <h2>Динамика цены</h2>
+    <canvas id="priceChart"></canvas>
   </section>
 
-  <!-- === Дорожная карта === -->
-  <section class="roadmap">
-    <h2>Roadmap</h2>
-    <ol>
-      <li>Май 2025: Запуск в TON</li>
-      <li>Июнь 2025: Первые листинги на DEX</li>
-      <li>Июль 2025: Аирдроп для первых 100 холдеров</li>
-      <li>Август 2025: Публикация Whitepaper</li>
-    </ol>
+  <!-- Виджет обмена -->
+  <section>
+    <h2>Обмен через StonFi</h2>
+    <div id="swapWidget" class="swap"></div>
   </section>
 
-  <!-- === Контакты === -->
-  <footer class="footer">
-    <p>Присоединяйся к нашему сообществу:</p>
-    <a href="https://t.me/BlumGirlChat">Telegram</a> |
-    <a href="https://twitter.com/BlumGirlCoin">Twitter</a>
-  </footer>
+  <footer>© 2025 BLUMGIRL</footer>
+  <script src="app.js"></script>
 </body>
 </html>
